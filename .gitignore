@@ -3,3 +3,11 @@
 ################################################################################
 
 *.suo
+/.vs/Collections/v15/Server/sqlite3
+/Collections/bin/Debug/netstandard2.0
+/Collections/obj
+/CollectionTests/bin/Debug/netcoreapp2.0
+/CollectionTests/obj/Debug/netcoreapp2.0
+*.csproj
+/CollectionTests/obj
+*.sln
