@@ -1,7 +1,7 @@
 ﻿
 namespace Collections.Sets.Consumables
 {
-    interface IConsumableMinHeap<T> : IConsumableSet<T>, IComparableSet<T>
+    interface IConsumableMinHeap<T> : IConsumableSet<T>
     {
         ref readonly Consumable<T> MinExtractor { get; }
     }
