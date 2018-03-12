@@ -38,10 +38,31 @@ namespace Collections.Sets
 {
     public interface ISimpleReadonlySet<T> : IEnumerable<T>
     {
+        /// <summary>
+        /// Gets the number of items in this Set.
+        /// </summary>
+        /// <value>
+        /// The item count.
+        /// </value>
         int Count { get; }
 
+        /// <summary>
+        /// Gets a value indicating whether this instance is readonly. Readonly says
+        /// whether this object can add items to the underlying structure. Even if
+        /// IsReadonly is true, the set may be changed by a different object.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if this instance is readonly; otherwise, <c>false</c>.
+        /// </value>
         bool IsReadonly { get; }
 
+        /// <summary>
+        /// Gets a value indicating whether this instance is immutable. If true the set
+        /// may not change, ever.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if this set is immutable; otherwise, <c>false</c>.
+        /// </value>
         bool IsStatic { get; }
     }
 }

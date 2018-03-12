@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IDistinctSet.cs" company="Public Domain">
+// <copyright file="IMaxHeap.cs" company="Public Domain">
 //     Public Domain as according to the unlicense
 // </copyright>
 //-----------------------------------------------------------------------
@@ -31,14 +31,11 @@
 ** 
 ** For more information, please refer to <http://unlicense.org/>
 **-----------------------------------------------------------------------*/
+using Collections.Sets.OrderedSets;
 
-using System;
-
-namespace Collections.Sets
+namespace Collections.Sets.Consumables.Heaps
 {
-    public interface IDistinctSet<T> : IDistinctFixedSizeSet<T>
+    interface IMinHeap<T> : IConsumableMinHeap<T>, IOrderedSet<T>
     {
-        bool AddOnce(in T item);
-        bool RemoveOnce(in T item);
     }
 }

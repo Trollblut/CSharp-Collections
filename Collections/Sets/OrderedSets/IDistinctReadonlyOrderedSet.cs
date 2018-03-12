@@ -32,15 +32,21 @@
 ** For more information, please refer to <http://unlicense.org/>
 **-----------------------------------------------------------------------*/
 
-using System;
 using System.Collections.Generic;
 
 namespace Collections.Sets.OrderedSets
 {
-    public interface IDistinctReadonlyOrderedSet<T> : IDistinctReadonlySet<T>
+    public interface IDistinctReadonlyOrderedSet<T> : IOrderedItemsSet<T>
     {
-        IComparer<T> Comparer { get; }
 
+        /// <summary>
+        /// Gets the between.
+        /// </summary>
+        /// <param name="infimum">The lower boundary for the comparison</param>
+        /// <param name="supremum">The upper boundary for the comparisson</param>
+        /// <param name="includeInfimum">if set to <c>true</c> [include infimum].</param>
+        /// <param name="includeSupremum">if set to <c>true</c> [include supremum].</param>
+        /// <returns></returns>
         IEnumerable<T> GetBetween(T infimum, T supremum, bool includeInfimum, bool includeSupremum);
 
         IEnumerable<T> GetGreater(T supremum);

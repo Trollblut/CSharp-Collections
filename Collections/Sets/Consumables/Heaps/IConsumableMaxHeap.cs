@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IDistinctSet.cs" company="Public Domain">
+// <copyright file="IConsumableMaxHeap.cs" company="Public Domain">
 //     Public Domain as according to the unlicense
 // </copyright>
 //-----------------------------------------------------------------------
@@ -32,13 +32,17 @@
 ** For more information, please refer to <http://unlicense.org/>
 **-----------------------------------------------------------------------*/
 
-using System;
+using Collections.Sets.OrderedSets;
 
-namespace Collections.Sets
+namespace Collections.Sets.Consumables.Heaps
 {
-    public interface IDistinctSet<T> : IDistinctFixedSizeSet<T>
+    interface IConsumableMaxHeap<T> : IConsumableSet<T>, IDistinctReadonlyOrderedSet<T>
     {
-        bool AddOnce(in T item);
-        bool RemoveOnce(in T item);
+        ref readonly Consumable<T> MaxExtractor { get; }
+    }
+    static class ConsumableMaxHeapExtensions
+    {
+        public static T ExtractMax<T>(this IConsumableMaxHeap<T> minHeap) => minHeap.MaxExtractor.Take();
+        public static bool TryExtractMin<T>(this IConsumableMaxHeap<T> minHeap, out T item) => minHeap.MaxExtractor.TryTake(out item);
     }
 }

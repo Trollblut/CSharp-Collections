@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IReadonlySet.cs" company="Public Domain">
+// <copyright file="IMaxHeap.cs" company="Public Domain">
 //     Public Domain as according to the unlicense
 // </copyright>
 //-----------------------------------------------------------------------
@@ -31,18 +31,11 @@
 ** 
 ** For more information, please refer to <http://unlicense.org/>
 **-----------------------------------------------------------------------*/
-
 using Collections.Sets.OrderedSets;
 
-namespace Collections.Sets.Consumables
+namespace Collections.Sets.Consumables.Heaps
 {
-    interface IConsumableMaxHeap<T> : IConsumableSet<T>, IDistinctReadonlyOrderedSet<T>
+    interface IMaxHeap<T>:IConsumableMaxHeap<T>, IOrderedSet<T>
     {
-        ref readonly Consumable<T> MaxExtractor { get; }
-    }
-    static class ConsumableMaxHeapExtensions
-    {
-        public static T ExtractMax<T>(this IConsumableMaxHeap<T> minHeap) => minHeap.MaxExtractor.Take();
-        public static bool TryExtractMin<T>(this IConsumableMaxHeap<T> minHeap, out T item) => minHeap.MaxExtractor.TryTake(out item);
     }
 }
