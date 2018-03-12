@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Collections.Collections.TreeSets
+namespace Collections.Sets.OrderedSets
 {
-    interface IDistinctReadonlyOrderedSet<T> : IDistinctReadonlyCollection<T> where T : IComparable<T>, IEquatable<T>
+    interface IDistinctReadonlyOrderedSet<T> : IDistinctReadonlySet<T> where T : IComparable<T>, IEquatable<T>
     {
 
         IEnumerable<T> GetBetween(T infimum, T supremum, bool includeInfimum, bool includeSupremum);

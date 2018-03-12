@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Collections.Dictionarys
+namespace Collections.Maps
 {
     struct KeyValuePair<TKey, TValue> : IEquatable<KeyValuePair<TKey, TValue>> where TKey : IEquatable<TKey>
     {

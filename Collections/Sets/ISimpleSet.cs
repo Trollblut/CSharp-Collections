@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Collections.Collections
+namespace Collections.Sets
 {
-    interface ISimpleCollection<T> : ISimpleFixedSizeCollection<T>
+    interface ISimpleSet<T> : ISimpleFixedSizeSet<T>
     {
         void Add(in T item);
         int RemoveAll(in ItemChooser<T> chooser);

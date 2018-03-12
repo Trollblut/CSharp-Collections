@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Collections.Collections
+namespace Collections.Sets
 {
-    interface ISimpleReadonlyCollection<T> : IEnumerable<T>
+    interface ISimpleReadonlySet<T> : IEnumerable<T>
     {
         int Count { get; }
         bool IsReadonly { get; }

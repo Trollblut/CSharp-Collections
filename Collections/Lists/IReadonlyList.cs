@@ -1,8 +1,8 @@
-﻿using Collections.Collections;
-using Collections.Dictionarys;
+﻿using Collections.Maps;
+using Collections.Sets;
 namespace Collections.Lists
 {
-    interface IReadonlyList<T> : IReadonlyDictionary<int, T>
+    interface IReadonlyList<T> : IReadonlyMap<int, T>
     {
     }
 
@@ -25,13 +25,13 @@ namespace Collections.Lists
 
             public T this[in int key] => _list[key];
 
-            public IReadonlyCollection<int> Keys => _list.Keys;
+            public IReadonlySet<int> Keys => _list.Keys;
 
-            public ISimpleReadonlyCollection<T> Values => _list.Values;
+            public ISimpleReadonlySet<T> Values => _list.Values;
 
             public bool IsDistinct => _list.IsDistinct;
 
-            public bool IsDistinctCollection => _list.IsDistinctCollection;
+            public bool IsDistinctSet => _list.IsDistinctSet;
 
             public int Count => _list.Count;
 
@@ -39,9 +39,9 @@ namespace Collections.Lists
 
             public bool IsStatic => false;
 
-            public bool Contains(in Dictionarys.KeyValuePair<int, T> item) => _list.Contains(item);
+            public bool Contains(in Maps.KeyValuePair<int, T> item) => _list.Contains(item);
 
-            public System.Collections.Generic.IEnumerator<Dictionarys.KeyValuePair<int, T>> GetEnumerator()
+            public System.Collections.Generic.IEnumerator<Maps.KeyValuePair<int, T>> GetEnumerator()
             {
                 return _list.GetEnumerator();
             }

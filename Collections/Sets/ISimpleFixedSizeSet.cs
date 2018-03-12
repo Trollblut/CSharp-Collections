@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Collections.Collections
+namespace Collections.Sets
 {
-    interface ISimpleFixedSizeCollection<T> : ISimpleReadonlyCollection<T>
+    interface ISimpleFixedSizeSet<T> : ISimpleReadonlySet<T>
     {
         int EditAll(in ItemEditor<T> editor);
         bool EditOnce(in ItemEditor<T> editor);
