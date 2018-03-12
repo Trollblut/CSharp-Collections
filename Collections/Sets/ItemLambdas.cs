@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Collections.Sets
 {
-    delegate bool ItemChooser<T>(in T item);
-    delegate bool ItemEditor<T>(ref T item);
+    public delegate bool ItemChooser<T>(in T item);
+    public delegate bool ItemEditor<T>(ref T item);
+    public delegate void ItemSink<T>(in T item);
+    public delegate bool DistinctItemSink<T>(in T item);
 }

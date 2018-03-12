@@ -1,4 +1,5 @@
-﻿using Collections.Maps;
+﻿using System.Collections.Generic;
+using Collections.Maps;
 using Collections.Sets;
 namespace Collections.Lists
 {
@@ -38,6 +39,8 @@ namespace Collections.Lists
             public bool IsReadonly => true;
 
             public bool IsStatic => false;
+
+            public IComparer<Maps.KeyValuePair<int, T>> Comparer => _list.Comparer;
 
             public bool Contains(in Maps.KeyValuePair<int, T> item) => _list.Contains(item);
 

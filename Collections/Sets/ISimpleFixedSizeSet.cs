@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Collections.Sets
 {
-    interface ISimpleFixedSizeSet<T> : ISimpleReadonlySet<T>
+    public interface ISimpleFixedSizeSet<T> : ISimpleReadonlySet<T>
     {
         int EditAll(in ItemEditor<T> editor);
         bool EditOnce(in ItemEditor<T> editor);

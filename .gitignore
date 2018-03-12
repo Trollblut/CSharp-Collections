@@ -11,3 +11,9 @@
 *.csproj
 /CollectionTests/obj
 *.sln
+/.vs
+/Collections/.vs/CSharp-Collections/v15/Server/sqlite3
+/Collections/bin/Debug
+/Collections/Settings.StyleCop
+/Collections/StyleCop.Cache
+/CollectionTests/StyleCop.Cache

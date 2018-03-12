@@ -2,7 +2,7 @@
 
 namespace Collections.Sets
 {
-    interface IDistinctReadonlySet<T> : ISimpleReadonlySet<T> where T : IEquatable<T>
+    public interface IDistinctReadonlySet<T> : ISimpleReadonlySet<T>, IComparableSet<T> where T : IEquatable<T>
     {
         bool IsDistinct { get; }
         bool IsDistinctSet { get; }
