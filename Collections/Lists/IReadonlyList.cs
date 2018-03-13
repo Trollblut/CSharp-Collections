@@ -74,7 +74,7 @@ namespace Collections.Lists
             public bool IsReadonly => true;
 
             public bool IsStatic => false;
-            
+
             public IEqualityComparer<Maps.KeyValuePair<int, T>> EqualityComparer => throw new System.NotImplementedException();
 
             public bool Contains(in Maps.KeyValuePair<int, T> item) => _list.Contains(item);

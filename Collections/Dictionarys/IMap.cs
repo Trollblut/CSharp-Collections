@@ -44,7 +44,7 @@ namespace Collections.Maps
     {
         public static void Add<TKey, TValue>(this IMap<TKey, TValue> dict, in TKey key, in TValue value) where TKey : IEquatable<TKey>
         {
-            dict.Add(new KeyValuePair<TKey, TValue>(key, value));
+            dict.AddOnce(new KeyValuePair<TKey, TValue>(key, value));
         }
     }
 }

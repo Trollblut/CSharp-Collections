@@ -138,7 +138,10 @@ namespace Collections.Sets.Consumables.Heaps
 
         public T Take()
         {
-            throw new NotImplementedException();
+            if (_root == null)
+                throw new InvalidOperationException("Heap is Empty");
+            var ret = _root.Value;
+            return ret;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
